@@ -12,10 +12,12 @@ function QuickView() {
     queryFn: fetchAllPosts,
   });
 
-  function handleSubmit(event) {
+function handleSubmit(event) {
     event.preventDefault();
-    setSelectedId(input);
+    setSelectedId(Number(input));
   }
+
+  const selected = posts.find((post) => post.id === selectedId);
 
   return (
     <Panel title="글 번호로 바로 보기">
@@ -27,7 +29,7 @@ function QuickView() {
         />
         <button type="submit">보기</button>
       </form>
-      {selectedId && <p>{posts.find((post) => post.id === selectedId).title}</p>}
+        {selectedId !== null && <p>{selected ? selected.title : '없는 글입니다'}</p>}
     </Panel>
   );
 }
