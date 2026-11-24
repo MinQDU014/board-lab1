@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Header from './components/Header.jsx';
 import PostList from './components/PostList.jsx';
 import './App.css';
+import QuickView from './components/QuickView.jsx';
 
 function App() {
   const [showList, setShowList] = useState(true);
@@ -13,6 +14,7 @@ function App() {
           <h1>board-lab</h1>
           <Header />
         </div>
+        <QuickView></QuickView>
         <button onClick={() => setShowList(!showList)}>
           {showList ? '목록 접기' : '목록 펼치기'}
         </button>
