@@ -6,7 +6,7 @@ import './index.css';
 import App from './App.jsx';
 
 Sentry.init({
-  dsn: '여기에 복사한 DSN 주소를 붙여 넣습니다',
+  dsn: "https://77c9a2fd5adf9571a14de5c8ce6122b4@o4512489080487936.ingest.us.sentry.io/4512489136324608",
 });
 
 const queryClient = new QueryClient({
